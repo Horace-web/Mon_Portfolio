@@ -1,26 +1,60 @@
 @import "tailwindcss";
-
+/* Polices de base */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Palette Dark Gold */
+  --bg-primary: #030405;
+  --bg-secondary: #0a0c0f;
+  --bg-card: #111317;
+  --accent-cyan: #00ffff;
+  --accent-gold: #ffd700;
+  --accent-gold-dim: #b8860b;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border-glow: rgba(255, 215, 0, 0.15);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
+section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Classes utilitaires personnalisées */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+/* Animations de base */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+

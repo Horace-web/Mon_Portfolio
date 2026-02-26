@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-inner">
 
           <p className="footer-copy">
-            © 2026 <span className="gradient-text">DarkGold Portfolio</span>. Tous droits réservés.
+            © 2026 <span className="gradient-text">Horace ODOUNLAMI</span>. Tous droits réservés.
           </p>
 
           <ul className="footer-links">

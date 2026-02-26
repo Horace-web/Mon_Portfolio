@@ -15,6 +15,6 @@ export const skills: Skill[] = [
   },
   {
     name: "Méthodologies & Outils",
-    items: ["Git", "UML", "MERISE" , "Trello"]
+    items: ["Git", "UML", "MERISE" , "Trello" , "Postman"]
   }
 ]

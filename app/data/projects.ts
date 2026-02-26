@@ -17,7 +17,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Php-Social-Network",
     description:
-      "Simulation d'un réseau Social (imitation de Facebook) avec gestion des utilisateurs, publications et commentaires. Projet non achevé",
+      "Simulation d'un réseau Social avec gestion des utilisateurs, publications et commentaires. Projet non achevé",
     year: 2025,
     image: "/projects/7046464.jpg",
     technologies: ["Laravel", "Mysql", "Blade"],
@@ -41,4 +41,5 @@ export const projects: Project[] = [
   //   githubUrl: "https://github.com/Horace-web/portfolio",
 
   // },
+  
 ]

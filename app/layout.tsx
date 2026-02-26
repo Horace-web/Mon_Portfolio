@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter, Fira_Code } from 'next/font/google'
 import './globals.css'
+import RevealInit from "@/app/components/RevealInit";
+import BackgroundAnimation from "@/app/components/BackgroundAnimation";
 
 // Configuration des polices avec next/font
 const inter = Inter({
@@ -28,7 +30,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${inter.variable} ${firaCode.variable}`}>
-      <body>{children}</body>
+      <body>
+        <RevealInit />
+        <BackgroundAnimation />
+        <div style={{ position: "relative", zIndex: 1 }}>
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

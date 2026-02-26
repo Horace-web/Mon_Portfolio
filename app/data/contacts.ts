@@ -3,13 +3,13 @@ import { ContactInfo } from "@/app/types/contact"
 export const contactInfos: ContactInfo[] = [
   {
     type: "Email",
-    value: "horace.odounlami@example.com",
-    href: "mailto:horace.odounlami@example.com",
+    value: "horaceodounlami2006@gmail.com",
+    href: "mailto:horaceodounlami2006@gmail.com",
   },
   {
     type: "Téléphone",
-    value: "+229 90 00 00 00",
-    href: "tel:+22990000000",
+    value: "+229 01 51 78 42 84",
+    href: "tel:+2290151784284",
   },
   {
     type: "Localisation",

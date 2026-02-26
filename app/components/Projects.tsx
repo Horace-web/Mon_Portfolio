@@ -3,18 +3,19 @@ import ProjectCard from "./ProjectCard"
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-6 py-24">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="reveal">
+      <div className="container-custom">
 
-        {/* Titre */}
-        <h2 className="text-4xl font-bold mb-12 gradient-text text-center md:text-left">
-          Mes Projets
-        </h2>
+        <div className="text-center md:text-left mb-12">
+          <h2 className="section-title gradient-text">Mes Projets</h2>
+          <p className="section-subtitle">Une sélection de mes réalisations les plus récentes.</p>
+        </div>
 
-        {/* Grille responsive */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div key={project.id} className={`reveal reveal-delay-${(index % 3) + 1}`}>
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
 

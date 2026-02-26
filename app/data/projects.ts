@@ -6,26 +6,39 @@ export const projects: Project[] = [
     title: "Eat&Drink Platform",
     description:
       "Plateforme de gestion de stands avec authentification, panier et notifications email.",
+    year: 2025,
     image: "/projects/8694662.jpg",
     technologies: ["Laravel", "MySQL", "Blade"],
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "https://github.com/Horace-web/Eat-Drink",
+    // liveUrl: "#",
     featured: true,
   },
   {
     id: 2,
-    title: "ERP Gestion des Modules",
+    title: "Php-Social-Network",
     description:
-      "Système modulaire avec modélisation UML/MERISE et gestion avancée des entités.",
+      "Simulation d'un réseau Social (imitation de Facebook) avec gestion des utilisateurs, publications et commentaires. Projet non achevé",
+    year: 2025,
     image: "/projects/7046464.jpg",
-    technologies: ["Laravel", "UML", "Merise"],
+    technologies: ["Laravel", "Mysql", "Blade"],
+    githubUrl: "https://github.com/Horace-web/php-social-network",
   },
   {
     id: 3,
-    title: "Jeu C - Le Mot le Plus Long",
+    title: "GoogleKeepClone",
     description:
-      "Jeu console avec validation dictionnaire, sauvegarde et gestion des scores.",
+      "C'est un projet Angular qui vise à cloner Google keep",
     image: "/projects/971.jpg",
-    technologies: ["C", "Structures", "Fichiers"],
+    technologies: ["Angular", "TypeScript"],
+    githubUrl: "https://github.com/Horace-web/google-keep-clone",
   },
+  // {
+  //   id: 4,
+  //   title: "Portfolio",
+  //   description:"Mon portfolio personnel pour présenter mes projets et compétences en développement web.",
+  //   image: "/projects/portfolio.jpg",
+  //   technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+  //   githubUrl: "https://github.com/Horace-web/portfolio",
+
+  // },
 ]

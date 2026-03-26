@@ -8,4 +8,10 @@ export interface Project {
   githubUrl?: string
   liveUrl?: string
   featured?: boolean
+  hasDetail?: boolean
+  longDescription?: string
+  context?: string
+  features?: string[]
+  architecture?: string[]
+  status?: string
 }

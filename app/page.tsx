@@ -11,7 +11,6 @@ import Timeline from "./components/Timeline"
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main className="pt-28">
         <Hero />
         <About />
@@ -20,7 +19,7 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
-      <Footer />
+
     </>
   )
 }

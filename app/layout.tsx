@@ -3,8 +3,9 @@ import { Inter, Fira_Code } from 'next/font/google'
 import './globals.css'
 import RevealInit from "@/app/components/RevealInit";
 import BackgroundAnimation from "@/app/components/BackgroundAnimation";
+import Navbar from "@/app/components/Navbar"; // <-- Importation
+import Footer from "@/app/components/Footer"; // <-- Importation
 
-// Configuration des polices avec next/font
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -30,11 +31,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${inter.variable} ${firaCode.variable}`}>
-      <body>
+      <body className="antialiased">
         <RevealInit />
         <BackgroundAnimation />
+        
+        {/* Navbar fixe au dessus de tout */}
+        <Navbar />
+
+        {/* Wrapper pour le contenu principal */}
         <div style={{ position: "relative", zIndex: 1 }}>
           {children}
+          
+          {/* Footer en bas de chaque page */}
+          <Footer />
         </div>
       </body>
     </html>

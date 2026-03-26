@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Project } from "@/app/types/project"
 
 interface Props {
@@ -7,8 +8,8 @@ interface Props {
 
 export default function ProjectCard({ project }: Props) {
   return (
-    <div className="project-card flex flex-col">
-
+    <div className="project-card h-full">
+      {/* Image du projet */}
       <div className="w-full h-48 relative mb-5 overflow-hidden">
         <Image
           src={project.image}
@@ -19,28 +20,46 @@ export default function ProjectCard({ project }: Props) {
         />
       </div>
 
+      {/* Header : Titre + Année */}
       <div className="project-header">
         <h3>{project.title}</h3>
         {project.year && <span className="project-year">{project.year}</span>}
       </div>
 
+      {/* Description */}
       <p className="project-description">{project.description}</p>
 
+      {/* Technologies */}
       <div className="project-tech">
         {project.technologies.map((tech, index) => (
           <span key={index} className="tech-tag">{tech}</span>
         ))}
       </div>
 
+      {/* Liens GitHub / Live */}
       <div className="flex gap-4 mt-auto pt-2">
         {project.githubUrl && (
-          <a href={project.githubUrl} className="project-link">GitHub →</a>
+          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link">
+            GitHub →
+          </a>
         )}
         {project.liveUrl && (
-          <a href={project.liveUrl} className="project-link" style={{ color: "var(--accent-gold)" }}>Live →</a>
+          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link" >
+            Live →
+          </a>
         )}
       </div>
 
+      {/* Flèche vers la page de détails (ID) */}
+      {project.hasDetail && (
+        <Link 
+          href={`/Projects/${project.id}`} 
+          className="project-arrow" 
+          aria-label={`Voir les détails de ${project.title}`}
+        >
+          ↗
+        </Link>
+      )}
     </div>
   )
 }

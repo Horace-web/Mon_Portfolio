@@ -73,11 +73,12 @@ section {
 
 .navbar {
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 15px 0; /* Un peu plus compact */
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: 80px; /* On fixe une hauteur pour mieux gérer l'espacement */
 }
 
 .navbar::after {
@@ -313,7 +314,9 @@ section {
 .section-title {
   font-size: 2.2rem;
   font-weight: 300;
+  line-height: 1.4; /* Augmenté pour ne pas couper le gradient text */
   margin-bottom: 12px;
+  padding-top: 5px; /* Petit padding pour éviter le clipping en haut */
   position: relative;
   display: inline-block;
   background: linear-gradient(135deg, var(--accent-cyan), var(--accent-gold));
@@ -321,6 +324,7 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 
 .section-title::after {
   content: '';
@@ -349,11 +353,12 @@ section {
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border-glow);
-  padding: 28px;
+  padding: 28px 28px 45px 28px; 
   position: relative;
-  overflow: hidden;
   transition: all 0.3s ease;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card::before {
@@ -442,6 +447,52 @@ section {
 }
 
 .project-link:hover { color: var(--accent-gold); }
+
+/* === REGLAGE DE LA FLECHE DE DETAIL === */
+.project-arrow {
+  position: absolute;
+  bottom: 20px; /* Aligné avec le padding interne */
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-glow);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  text-decoration: none;
+  z-index: 10;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 4px; /* Garde l'aspect angulaire du design */
+  border-width: 1.5px; /* Trait un peu plus épais */
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+/* Effet au survol de la CARTE entière */
+.project-card:hover .project-arrow {
+  opacity: 2;
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(255, 215, 0, 0.1);
+  transform: translate(5px, -5px); /* Diagonale vers le haut-droite */
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3), 
+              0 0 10px rgba(255, 215, 0, 0.1);
+}
+
+/* Effet spécifique quand on survole DIRECTEMENT la flèche */
+.project-arrow:hover {
+  background: var(--accent-gold) !important;
+  color: #000 !important;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4) !important;
+}
+
+/* Ajustement de la card pour éviter les chevauchements */
+.project-card {
+  padding-bottom: 60px !important; /* On s'assure que les liens GitHub/Live ne touchent jamais la flèche */
+}
 
 /* === SKILLS === */
 .skills-grid {
@@ -713,23 +764,18 @@ section {
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px 0;
+    flex-direction: row !important; /* Force l'alignement horizontal Logo | Bouton */
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
   }
 
   .logo { font-size: 1.1rem; }
 
   .nav-links {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none !important; 
   }
 
-  .nav-link {
-    font-size: 0.65rem;
-    letter-spacing: 1px;
-  }
 
   section:first-of-type { padding-top: 11rem; }
 
@@ -813,4 +859,233 @@ section {
   .nav-link { font-size: 0.6rem; }
   .skills-grid { grid-template-columns: 1fr; }
   .code-card pre { font-size: 0.58rem !important; }
+}
+/* === PROJECT DETAILS PAGE === */
+
+/* Bannière d'image avec effet de profondeur */
+.detail-banner {
+  border: 1px solid var(--border-glow);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--bg-card);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.detail-page-main {
+  padding-top: 120px; /* Espace suffisant pour la Navbar (80px) + marge (40px) */
+}
+
+/* On harmonise les containers de la page détail */
+.detail-section {
+  margin-bottom: 4rem;
+}
+
+/* Status du projet (ex: En cours, Terminé) */
+.detail-status {
+  margin: 20px;
+  margin-left: 0px;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* Description principale */
+.detail-long-desc {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Bloc Contexte (style blockquote technique) */
+.detail-context {
+  margin: 32px 0;
+  padding: 24px;
+  background: var(--bg-secondary);
+  border-left: 2px solid var(--accent-gold);
+  position: relative;
+}
+
+.detail-context p {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* Sous-titres de section */
+.detail-subtitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Liste des fonctionnalités (Style "Terminal") */
+.detail-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+.detail-features li {
+  color: var(--text-secondary);
+  font-family: monospace;
+  font-size: 0.9rem;
+  padding-left: 25px;
+  position: relative;
+}
+
+.detail-features li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  font-weight: bold;
+}
+
+/* Animation au chargement de la page */
+.detail-banner, .detail-long-desc, .code-card {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Responsive Ajustements */
+@media (max-width: 768px) {
+  .detail-banner {
+    height: 250px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .detail-long-desc {
+    font-size: 1rem;
+  }
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.back-link:hover {
+  color: var(--accent-gold);
+  transform: translateX(-5px);
+}
+/* Animation automatique pour le contenu de la page détail */
+.detail-banner,
+.detail-content-animate,
+.detail-sidebar-animate {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* On s'assure que fadeIn est bien défini (tu l'as déjà normalement) */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Optionnel : Ajoute un petit délai pour la carte de droite pour un effet plus stylé */
+.detail-sidebar-animate {
+  animation-delay: 0.2s;
+  opacity: 0; /* Évite un flash avant l'animation */
+}
+
+.code-card pre {
+  /* Pour Firefox */
+  scrollbar-width: none;
+  /* Pour Internet Explorer et Edge */
+  -ms-overflow-style: none;
+  /* Pour éviter les retours à la ligne automatiques qui cassent le look "code" */
+  white-space: pre; 
+}
+
+/* Pour Chrome, Safari et Opera */
+.code-card pre::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Espacement plus généreux sous les fonctionnalités --- */
+.detail-features {
+  margin-bottom: 3rem; /* Ajoute de l'espace AVANT les boutons GitHub/Live */
+}
+
+/* On s'assure que les boutons respirent bien */
+.detail-actions-gap {
+  margin-top: 2rem;
+}
+
+/* --- Bouton Spécifique "Démo Live" --- */
+.project-live-demo-btn {
+  /* Styles de base copiés de .contact-btn mais avec les couleurs cyan */
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  padding: 12px 30px; /* Spécifique à cet usage */
+  font-family: monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto; /* S'adapte au contenu */
+  position: relative;
+  overflow: hidden;
+  z-index: 0; /* S'assurer qu'il est au-dessus du fond */
+  text-decoration: none; /* Pour les balises <a> */
+  display: inline-flex; /* Pour gérer l'alignement flex si besoin */
+  align-items: center; /* Pour centrer verticalement le texte */
+  justify-content: center; /* Pour centrer horizontalement le texte */
+}
+
+.project-live-demo-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-cyan); /* Le fond glissant sera cyan */
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.project-live-demo-btn:hover {
+  color: #000000 !important; /* Le texte devient noir au survol */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Une légère lueur cyan au survol */
+}
+
+.project-live-demo-btn:hover::before {
+  left: 0; /* Fait glisser le fond cyan */
+}
+/* Style pour l'animation du bouton burger */
+button span {
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
 }

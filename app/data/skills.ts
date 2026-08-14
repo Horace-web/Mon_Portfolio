@@ -7,7 +7,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Backend",
-    items: ["Laravel", "Node.js", "Php" ]
+    items: ["Laravel", "Node.js", "Php", "Nest.js" ]
   },
   {
     name: "Base de données",

@@ -1,0 +1,13 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <mask id="mask">
+      <text x="30" y="340" font-family="'Helvetica Neue', Arial, sans-serif" font-size="280" font-weight="900" fill="white">HO</text>
+    </mask>
+  </defs>
+  <rect width="500" height="500" rx="80" fill="#080C0A"/>
+  <rect width="500" height="500" rx="80" fill="url(#grad)" mask="url(#mask)"/>
+</svg>

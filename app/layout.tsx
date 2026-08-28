@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Fira_Code } from 'next/font/google'
-import './globals.css'
+import './globals.css';
 import RevealInit from "@/app/components/RevealInit";
 import BackgroundAnimation from "@/app/components/BackgroundAnimation";
 import Navbar from "@/app/components/Navbar"; // <-- Importation
@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: 'Portfolio | Développeur Full Stack',
   description: 'Portfolio de développeur full stack - Projets innovants',
   authors: [{ name: 'ODOUNLAMI Horace' }],
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

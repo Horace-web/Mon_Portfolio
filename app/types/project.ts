@@ -7,6 +7,7 @@ export interface Project {
   technologies: string[]
   githubUrl?: string
   liveUrl?: string
+  deploy?: string
   featured?: boolean
   hasDetail?: boolean
   longDescription?: string
@@ -14,4 +15,5 @@ export interface Project {
   features?: string[]
   architecture?: string[]
   status?: string
+  
 }

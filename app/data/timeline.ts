@@ -8,21 +8,15 @@ export const parcours: TimelineItem[] = [
       "Obtention du Bac série D, base scientifique ayant orienté mon intérêt vers l'informatique.",
   },
   {
-    title: "Formation en Informatique",
-    date: "2023 – Aujourd'hui",
+    title: "Formation en Architecture des Logiciels à ESGIS Bénin",
+    date: "2023 , 2026",
     description:
-      "Apprentissage du développement logiciel avec spécialisation en backend et architecture d'applications.",
+      "Licence professionnelle spécialisée en développement et conception de systèmes logiciels. Obtention de la licence en 2026.",
   },
   {
-    title: "Montée en compétences Backend",
-    date: "2025",
+    title: "Stage chez FeexPay",
+    date: "Février 2026 , Mai 2026",
     description:
-      "Approfondissement de NestJS, Laravel, conception d'APIs et gestion de bases de données.",
-  },
-  {
-    title: "Stage académique chez FeexPay",
-    date: "2026",
-    description:
-      "Expérience en environnement réel : génération de factures PDF, réflexion sur l'architecture et migration de base de données.",
+      "Contribution au développement en environnement fintech réel : migration MongoDB vers PostgreSQL, module de génération de factures et évolution de la sandbox de paiement.",
   },
 ];

@@ -1,0 +1,38 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1E"/>
+      <stop offset="100%" stop-color="#0D1B33"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#g2)"/>
+  <g stroke="#1a2540" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="60" x2="600" y2="60"/><line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/><line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="150" y1="0" x2="150" y2="300"/><line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="450" y1="0" x2="450" y2="300"/>
+  </g>
+  <rect x="220" y="160" width="160" height="100" rx="6" fill="#0D1B33" stroke="#1E3A5F" stroke-width="1.5"/>
+  <rect x="220" y="160" width="160" height="20" rx="6" fill="#111E38"/>
+  <rect x="270" y="155" width="60" height="10" rx="3" fill="#152035" stroke="#1E3A5F" stroke-width="1"/>
+  <rect x="285" y="162" width="30" height="4" rx="2" fill="#0A0F1E"/>
+  <rect x="270" y="100" width="60" height="50" rx="4" fill="#0F2744" stroke="#38BDF8" stroke-width="1" transform="rotate(-5, 300, 125)"/>
+  <rect x="278" y="110" width="40" height="4" rx="2" fill="#152035" transform="rotate(-5, 300, 125)"/>
+  <rect x="278" y="120" width="30" height="4" rx="2" fill="#152035" transform="rotate(-5, 300, 125)"/>
+  <circle cx="282" cy="132" r="4" fill="none" stroke="#22C55E" stroke-width="1.5" transform="rotate(-5, 300, 125)"/>
+  <text x="283" y="135" font-family="monospace" font-size="7" fill="#22C55E" transform="rotate(-5, 300, 125)">✓</text>
+  <rect x="390" y="90" width="50" height="40" rx="4" fill="#0D1B33" stroke="#38BDF8" stroke-width="1.5"/>
+  <path d="M405 90 Q405 78 415 78 Q425 78 425 90" fill="none" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="415" cy="108" r="5" fill="#38BDF8" opacity="0.6"/>
+  <text x="415" y="145" text-anchor="middle" font-family="monospace" font-size="9" fill="#38BDF8">Sécurisé</text>
+  <rect x="100" y="200" width="80" height="12" rx="3" fill="#0F2744"/>
+  <rect x="100" y="200" width="60" height="12" rx="3" fill="#38BDF8" opacity="0.7"/>
+  <text x="95" y="210" text-anchor="end" font-family="monospace" font-size="9" fill="#64748B">A</text>
+  <rect x="100" y="220" width="80" height="12" rx="3" fill="#0F2744"/>
+  <rect x="100" y="220" width="35" height="12" rx="3" fill="#AAFF00" opacity="0.7"/>
+  <text x="95" y="230" text-anchor="end" font-family="monospace" font-size="9" fill="#64748B">B</text>
+  <rect x="100" y="240" width="80" height="12" rx="3" fill="#0F2744"/>
+  <rect x="100" y="240" width="20" height="12" rx="3" fill="#F59E0B" opacity="0.7"/>
+  <text x="95" y="250" text-anchor="end" font-family="monospace" font-size="9" fill="#64748B">C</text>
+  <ellipse cx="300" cy="200" rx="120" ry="60" fill="#38BDF8" opacity="0.02"/>
+</svg>

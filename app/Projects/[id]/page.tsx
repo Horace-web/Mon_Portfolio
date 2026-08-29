@@ -103,7 +103,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                 {project.architecture && project.architecture.map((a, i) => (
                   <span key={i} className="block">{"  "}<span className="code-key">arch_{i + 1}</span>: <span className="code-string">"{a}"</span>,</span>
                 ))}
-                <span className="block">{"  "}<span className="code-key">deploy</span>: <span className="code-string">"Vercel"</span>,</span>
+                {project.deploy && (
+                  <span className="block">{"  "}<span className="code-key">deploy</span>: <span className="code-string">"{project.deploy}"</span>,</span>
+                )}
                 <span className="block">{"}"}</span>
               </pre>
             </div>

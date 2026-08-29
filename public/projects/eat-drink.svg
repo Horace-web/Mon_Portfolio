@@ -1,0 +1,54 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1E"/>
+      <stop offset="100%" stop-color="#0D1B33"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#g4)"/>
+  <g stroke="#1a2540" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="60" x2="600" y2="60"/><line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/><line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="150" y1="0" x2="150" y2="300"/><line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="450" y1="0" x2="450" y2="300"/>
+  </g>
+  <!-- Menu card -->
+  <rect x="80" y="60" width="140" height="180" rx="8" fill="#0D1B33" stroke="#1E3A5F" stroke-width="1.5"/>
+  <rect x="80" y="60" width="140" height="32" rx="8" fill="#111E38"/>
+  <rect x="80" y="80" width="140" height="12" fill="#111E38"/>
+  <text x="150" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="#AAFF00">MENU</text>
+  <!-- Menu items -->
+  <rect x="96" y="104" width="60" height="28" rx="4" fill="#0F2744" stroke="#38BDF8" stroke-width="0.8"/>
+  <text x="126" y="116" text-anchor="middle" font-family="monospace" font-size="8" fill="#64748B">Burger</text>
+  <text x="126" y="127" text-anchor="middle" font-family="monospace" font-size="8" fill="#AAFF00">2500 XOF</text>
+  <rect x="164" y="104" width="44" height="28" rx="4" fill="#0F2744" stroke="#38BDF8" stroke-width="0.8"/>
+  <text x="186" y="116" text-anchor="middle" font-family="monospace" font-size="8" fill="#64748B">Pizza</text>
+  <text x="186" y="127" text-anchor="middle" font-family="monospace" font-size="8" fill="#AAFF00">3500</text>
+  <rect x="96" y="140" width="112" height="4" rx="2" fill="#152035"/>
+  <rect x="96" y="152" width="90" height="4" rx="2" fill="#152035"/>
+  <rect x="96" y="164" width="100" height="4" rx="2" fill="#152035"/>
+  <!-- Cart -->
+  <rect x="96" y="186" width="112" height="28" rx="4" fill="#0F2744" stroke="#AAFF00" stroke-width="1"/>
+  <text x="152" y="198" text-anchor="middle" font-family="monospace" font-size="8" fill="#64748B">Panier</text>
+  <text x="152" y="209" text-anchor="middle" font-family="monospace" font-size="8" fill="#AAFF00">6,000 XOF</text>
+  <!-- Arrow -->
+  <line x1="226" y1="150" x2="270" y2="150" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="268,146 276,150 268,154" fill="#38BDF8"/>
+  <!-- Notification panel -->
+  <rect x="276" y="80" width="160" height="80" rx="8" fill="#0D1B33" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="356" y="100" text-anchor="middle" font-family="monospace" font-size="9" fill="#38BDF8">Nouvelle commande</text>
+  <rect x="292" y="110" width="128" height="6" rx="2" fill="#152035"/>
+  <rect x="292" y="122" width="100" height="6" rx="2" fill="#152035"/>
+  <rect x="292" y="134" width="80" height="16" rx="4" fill="#0F2A10" stroke="#22C55E" stroke-width="1"/>
+  <text x="332" y="146" text-anchor="middle" font-family="monospace" font-size="8" fill="#22C55E">Email envoyé ✓</text>
+  <!-- Auth badges -->
+  <rect x="276" y="180" width="70" height="28" rx="4" fill="#0D1B33" stroke="#38BDF8" stroke-width="1"/>
+  <text x="311" y="192" text-anchor="middle" font-family="monospace" font-size="8" fill="#38BDF8">Admin</text>
+  <text x="311" y="203" text-anchor="middle" font-family="monospace" font-size="7" fill="#64748B">multi-rôles</text>
+  <rect x="356" y="180" width="80" height="28" rx="4" fill="#0D1B33" stroke="#AAFF00" stroke-width="1"/>
+  <text x="396" y="192" text-anchor="middle" font-family="monospace" font-size="8" fill="#AAFF00">Laravel</text>
+  <text x="396" y="203" text-anchor="middle" font-family="monospace" font-size="7" fill="#64748B">MVC</text>
+  <!-- Tech label -->
+  <text x="356" y="240" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748B">Laravel · MySQL · Blade</text>
+  <ellipse cx="300" cy="150" rx="160" ry="80" fill="#AAFF00" opacity="0.02"/>
+</svg>

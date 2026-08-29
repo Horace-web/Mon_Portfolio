@@ -54,7 +54,7 @@ export default function Timeline() {
         <div className="text-center md:text-left">
           <h2 className="section-title">Parcours</h2>
           <p className="section-subtitle">
-            Mon évolution dans le développement et les projets réalisés.
+            Mon évolution dans le monde du développement .
           </p>
         </div>
 

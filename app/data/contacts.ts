@@ -15,4 +15,9 @@ export const contactInfos: ContactInfo[] = [
     type: "Localisation",
     value: "Cotonou, Bénin",
   },
+  {
+    type: "LinkedIn",
+    value: "Horace Odounlami",
+    href: "https://www.linkedin.com/in/horace-odounlami/",
+  },
 ]

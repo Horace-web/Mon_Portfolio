@@ -68,7 +68,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
 
             {project.screenshots && project.screenshots.length > 0 && (
               <div className="mb-12">
-                <h3 className="detail-subtitle mb-6">Aperçu de l'application</h3>
+                <h3 className="detail-subtitle mb-6">Aperçu de la plateforme</h3>
                 <div className="grid gap-6">
                   {project.screenshots.map((screenshot) => (
                     <div key={screenshot} className="overflow-hidden rounded-xl border border-white/10">

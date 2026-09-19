@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react"
 import emailjs from "emailjs-com"
 import { contactInfos } from "@/app/data/contacts"
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from "react-icons/fa"
 import { IconType } from "react-icons"
 
 const iconMap: Record<string, IconType> = {
   Email: FaEnvelope,
   Téléphone: FaPhone,
   Localisation: FaMapMarkerAlt,
+  LinkedIn: FaLinkedin,
 }
 
 export default function Contact() {

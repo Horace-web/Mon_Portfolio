@@ -6,11 +6,9 @@ export const projects: Project[] = [
     title: "API Monitor",
     description: "Plateforme de monitoring d'APIs avec détection d'incidents, métriques de disponibilité et alertes email automatiques.",
     year: 2026,
-    image: "/projects/api-monitor-dashboard.svg",
+    image: "/projects/Api-monitor-accueil.png",
     screenshots: [
-      "/projects/api-monitor-dashboard.svg",
-      "/projects/api-monitor-incidents.svg",
-      "/projects/api-monitor-swagger.svg",
+      "/projects/Api-monitor-accueil.png",
     ],
     technologies: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Supabase", "Brevo"],
     githubUrl: "https://github.com/Horace-web/api-monitor-api",

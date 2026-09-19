@@ -4,6 +4,7 @@ export interface Project {
   description: string
   year?: string | number
   image: string
+  screenshots?: string[]
   technologies: string[]
   githubUrl?: string
   liveUrl?: string
@@ -15,5 +16,4 @@ export interface Project {
   features?: string[]
   architecture?: string[]
   status?: string
-  
 }

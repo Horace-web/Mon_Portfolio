@@ -39,8 +39,8 @@ export default function ProjectCard({ project }: Props) {
       {/* Liens GitHub / Live */}
       <div className="flex gap-4 mt-auto pt-2">
         {project.githubUrl && (
-          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-            GitHub →
+          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link" aria-label={`Voir le code de ${project.title} sur GitHub`}>
+            Voir sur GitHub ↗
           </a>
         )}
         {project.liveUrl && (

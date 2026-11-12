@@ -7,6 +7,7 @@ export interface Project {
   screenshots?: string[]
   technologies: string[]
   githubUrl?: string
+  githubPrivate?: boolean
   liveUrl?: string
   deploy?: string
   featured?: boolean

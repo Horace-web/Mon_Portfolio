@@ -91,6 +91,12 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
                   Voir le code (GitHub)
                 </a>
               )}
+              {project.githubPrivate && (
+                <span className="inline-flex items-center gap-2 text-sm text-gray-400 py-3" role="note">
+                  <span aria-hidden="true">🔒</span>
+                  Code source privé — dépôt non accessible publiquement.
+                </span>
+              )}
               {project.liveUrl && (
                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-live-demo-btn" style={{ width: "auto", padding: "12px 30px" }}>
                   Démo Live

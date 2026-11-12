@@ -2,6 +2,41 @@ import { Project } from "@/app/types/project"
 
 export const projects: Project[] = [
   {
+    id: 6,
+    title: "FeexPay — Gestion des incidents",
+    description: "Application web de gestion des incidents techniques : déclaration, attribution, suivi des tickets et pilotage des délais de résolution.",
+    year: 2026,
+    image: "/projects/FeexPay — Gestion des incidents et 7 pages de plus - Personnel – Microsoft​ Edge 12_11_2026 21_52_34.png",
+    screenshots: [
+      "/projects/FeexPay — Gestion des incidents et 7 pages de plus - Personnel – Microsoft​ Edge 12_11_2026 21_52_34.png",
+    ],
+    technologies: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Supabase"],
+    liveUrl: "https://feexpay-frontend.onrender.com",
+    deploy: "Render",
+    featured: true,
+    hasDetail: true,
+    longDescription: "Plateforme full-stack conçue pour centraliser la gestion des incidents dans un environnement fintech. Elle permet aux équipes de déclarer les incidents, de suivre leur traitement selon différents niveaux de priorité et de responsabilité, et de mieux piloter les délais de prise en charge et de résolution.",
+    context: "Projet de soutenance réalisé en binôme dans le contexte de FeexPay, afin de structurer le traitement des incidents techniques et d'améliorer leur suivi au sein des équipes.",
+    features: [
+      "Création et suivi des tickets d'incident",
+      "Gestion des rôles et des niveaux d'intervention",
+      "Priorisation des incidents (P1 à P4)",
+      "Workflow de traitement et d'escalade",
+      "Configuration des SLA",
+      "Suivi des délais de prise en charge et de résolution",
+      "Commentaires et notifications",
+      "Tableau de bord de suivi des incidents",
+    ],
+    architecture: [
+      "Frontend : Next.js + TypeScript",
+      "Backend : NestJS",
+      "Base de données : PostgreSQL",
+      "Accès aux données : Prisma",
+      "Hébergement : Render",
+    ],
+    status: "En cours de validation",
+  },
+  {
     id: 5,
     title: "API Monitor",
     description: "Plateforme de monitoring d'APIs avec détection d'incidents, métriques de disponibilité et alertes email automatiques.",

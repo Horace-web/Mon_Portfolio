@@ -35,6 +35,8 @@ export const projects: Project[] = [
       "Hébergement : Render",
     ],
     status: "En cours de validation",
+    // Dépôts privés : aucun lien GitHub public à afficher.
+    githubPrivate: true,
   },
   {
     id: 5,
